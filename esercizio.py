@@ -1,7 +1,7 @@
-numero = int(input ())
-if numero > 10:
-    print ("Hai spaccato")
-else:
-    print ("Hai smarciato")
+import hashlib
 
-#testini
+testo=input("testo da hashare: ")
+
+hash_finale = hashlib.md5(testo.encode()).hexdigest()
+
+print("Testo:", testo, "MD5:", hash_finale)
